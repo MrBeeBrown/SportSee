@@ -1,9 +1,13 @@
 import './App.css';
+import './components/Header.js';
+import Header from './components/Header';
+import Main from './components/Main';
 
 function App() {
   return (
-    <div className="main">
-      <h1>Hello</h1>
+    <div>
+      <Header />
+      <Main />
     </div>
   );
 }
