@@ -1,0 +1,6 @@
+{
+  "/user/:id": "/user?id=:id",
+  "/user/:id/activity": "/activity?userId=:id",
+  "/user/:id/average-sessions": "/average-sessions?userId=:id",
+  "/user/:id/performance": "/performance?userId=:id"
+}
