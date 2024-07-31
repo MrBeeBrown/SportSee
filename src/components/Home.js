@@ -11,7 +11,6 @@ function Home() {
   const id = '18';
   return (
     <div>
-      <Header />
       <div className="main">
         <div className='activity__menu'>
           <div className="activity">

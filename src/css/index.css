@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Monstserrat';
-  src: url('./fonts/Montserrat-Regular.ttf') format('truetype');
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
 body {
