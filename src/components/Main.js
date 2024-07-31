@@ -2,8 +2,11 @@ import Yoga from '../assets/yoga.svg';
 import Dumbbell from '../assets/dumbbell.svg';
 import Swim from '../assets/swimming.svg';
 import Bike from '../assets/bicycle.svg';
+import GetData from './GetData';
 
 function Main() {
+  const endpoint = 'user';
+  const id = '18';
   return (
     <div className="main">
       <div className='activity__menu'>
@@ -26,6 +29,7 @@ function Main() {
         </div>
       </div>
       <div className="summary">
+        <GetData endpoint={endpoint} id={id} />
       </div>
     </div>
   );
