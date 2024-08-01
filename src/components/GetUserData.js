@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 
-const GetData = ({ endpoint, id }) => {
+const GetUserData = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -30,11 +30,17 @@ const GetData = ({ endpoint, id }) => {
   }
 
   return (
-    <div>
-      <h1>Data for {endpoint}/{id}</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+    <div className='user__info'>
+      {(data && data.length > 0) ? (
+        <div>
+          <h2>Bonjour {data[0].userInfos.firstName}</h2>
+          <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+        </div>
+      ) : (
+        <p>No data available</p>
+      )}
     </div>
   );
 };
 
-export default GetData;
+export default GetUserData;

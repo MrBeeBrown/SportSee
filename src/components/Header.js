@@ -7,7 +7,6 @@ function Header() {
         <img src={Logo} alt="logo" />
         <h1>Sportsee</h1>
       </div>
-
       <div className="nav">
         <p>Accueil</p>
         <p>Profil</p>

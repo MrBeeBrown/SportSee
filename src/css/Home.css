@@ -1,1 +1,21 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 780px;
+  padding: 4rem;
+}
 
+.user__info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.user__activity {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
