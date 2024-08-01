@@ -4,6 +4,7 @@ import Swim from '../assets/swimming.svg';
 import Bike from '../assets/bicycle.svg';
 import GetUserData from './GetUserData';
 import GetUserActivity from './GetUserActivity';
+import GetUserNutrition from './GetUserNutrition';
 import Header from './Header';
 import '../css/Home.css';
 
@@ -39,7 +40,7 @@ function Home() {
               <GetUserActivity endpoint="activity" id="12" />
             </div>
             <div className='nutrition__display'>
-
+              <GetUserNutrition endpoint="user" id="12" />
             </div>
           </div>
         </div>

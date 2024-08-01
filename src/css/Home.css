@@ -11,6 +11,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  margin-bottom: 5rem;
 }
 
 .user__activity {
@@ -18,4 +19,60 @@
   flex-direction: row;
   width: 100%;
   align-items: center;
+  justify-content: space-between;
+}
+
+.user__week__activity {
+  background-color: #FBFBFB;
+}
+
+.nutrition__card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  width: 260px;
+  height: 125px;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.icons {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.nutrition__text {
+  font-size: .7rem;
+}
+
+.nutrition__value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.energy__icons {
+  background-color: #fbeaea;
+}
+
+.proteines__icons {
+  background-color: #e9f4fb;
+}
+
+.glucides__icons {
+  background-color: #faf6e5;
+}
+
+.lipides__icons {
+  background-color: #fbeaef;
 }

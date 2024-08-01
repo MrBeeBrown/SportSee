@@ -32,7 +32,7 @@ const GetUserActivity = ({ endpoint, id }) => {
   }
 
   return (
-    <div className='user__graph__activity'>
+    <div className='user__week__activity'>
       {(data && data.length > 0) ? (
         <BiaxialBarChart data={data[0].sessions[0]} />
       ) : (
