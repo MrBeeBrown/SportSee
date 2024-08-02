@@ -5,6 +5,9 @@ import Bike from '../assets/bicycle.svg';
 import GetUserData from './GetUserData';
 import GetUserActivity from './GetUserActivity';
 import GetUserNutrition from './GetUserNutrition';
+import GetUserSession from './GetUserSession';
+import GetUserPerformance from './GetUserPerformance';
+import GetUserScore from './GetUserScore';
 import Header from './Header';
 import '../css/Home.css';
 
@@ -33,14 +36,19 @@ function Home() {
           </div>
         </div>
         <div className="summary">
-          <GetUserData endpoint="user" id="12" />
+          <GetUserData endpoint="user" id="18" />
           <div className='user__activity'>
 
             <div className='user__graph'>
-              <GetUserActivity endpoint="activity" id="12" />
+              <GetUserActivity endpoint="activity" id="18" />
+              <div className='user__session'>
+                <GetUserSession endpoint="averageSessions" id="18" />
+                <GetUserPerformance endpoint="performance" id="18" />
+                <GetUserScore endpoint="user" id="18" />
+              </div>
             </div>
             <div className='nutrition__display'>
-              <GetUserNutrition endpoint="user" id="12" />
+              <GetUserNutrition endpoint="user" id="18" />
             </div>
           </div>
         </div>

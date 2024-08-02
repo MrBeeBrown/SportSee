@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
-import BiaxialBarChart from '../charts/BiaxialBarChart';
+import SimplePieChart from '../charts/SimplePieChart';
 
-const GetUserActivity = ({ endpoint, id }) => {
+const GetUserScore = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -31,9 +31,9 @@ const GetUserActivity = ({ endpoint, id }) => {
   }
 
   return (
-    <div className='user__week__activity'>
+    <div className='user__score'>
       {(data && data.length > 0) ? (
-        <BiaxialBarChart data={data[0].sessions} />
+        <SimplePieChart data={data[0].score} />
       ) : (
         <p>No data available</p>
       )}
@@ -41,4 +41,4 @@ const GetUserActivity = ({ endpoint, id }) => {
   );
 };
 
-export default GetUserActivity;
+export default GetUserScore;
