@@ -2,12 +2,7 @@ import Yoga from '../assets/yoga.svg';
 import Dumbbell from '../assets/dumbbell.svg';
 import Swim from '../assets/swimming.svg';
 import Bike from '../assets/bicycle.svg';
-import GetUserData from './GetUserData';
-import GetUserActivity from './GetUserActivity';
-import GetUserNutrition from './GetUserNutrition';
-import GetUserSession from './GetUserSession';
-import GetUserPerformance from './GetUserPerformance';
-import GetUserScore from './GetUserScore';
+import GetData from './GetData';
 import Header from './Header';
 import '../css/Home.css';
 
@@ -36,19 +31,19 @@ function Home() {
           </div>
         </div>
         <div className="summary">
-          <GetUserData endpoint="user" id="12" />
+          <GetData endpoint="user" id="12" type="false" />
           <div className='user__activity'>
 
             <div className='user__graph'>
-              <GetUserActivity endpoint="activity" id="12" />
+              <GetData endpoint="activity" id="12" type="false" />
               <div className='user__session'>
-                <GetUserSession endpoint="averageSessions" id="12" />
-                <GetUserPerformance endpoint="performance" id="12" />
-                <GetUserScore endpoint="user" id="12" />
+                <GetData endpoint="averageSessions" id="12" type="false" />
+                <GetData endpoint="performance" id="12" type="false" />
+                <GetData endpoint="user" id="12" type="score" />
               </div>
             </div>
             <div className='nutrition__display'>
-              <GetUserNutrition endpoint="user" id="12" />
+              <GetData endpoint="user" id="12" type="nutrition" />
             </div>
           </div>
         </div>

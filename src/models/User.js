@@ -10,6 +10,20 @@ class User {
     this.carbohydrateCount = data[0].keyData.carbohydrateCount;
     this.lipidCount = data[0].keyData.lipidCount;
   }
+
+  toJSON() {
+    return {
+      id: this.id,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      age: this.age,
+      score: this.score,
+      calorieCount: this.calorieCount,
+      proteinCount: this.proteinCount,
+      carbohydrateCount: this.carbohydrateCount,
+      lipidCount: this.lipidCount
+    }
+  }
 }
 
 export default User;
