@@ -36,19 +36,19 @@ function Home() {
           </div>
         </div>
         <div className="summary">
-          <GetUserData endpoint="user" id="18" />
+          <GetUserData endpoint="user" id="12" />
           <div className='user__activity'>
 
             <div className='user__graph'>
-              <GetUserActivity endpoint="activity" id="18" />
+              <GetUserActivity endpoint="activity" id="12" />
               <div className='user__session'>
-                <GetUserSession endpoint="averageSessions" id="18" />
-                <GetUserPerformance endpoint="performance" id="18" />
-                <GetUserScore endpoint="user" id="18" />
+                <GetUserSession endpoint="averageSessions" id="12" />
+                <GetUserPerformance endpoint="performance" id="12" />
+                <GetUserScore endpoint="user" id="12" />
               </div>
             </div>
             <div className='nutrition__display'>
-              <GetUserNutrition endpoint="user" id="18" />
+              <GetUserNutrition endpoint="user" id="12" />
             </div>
           </div>
         </div>

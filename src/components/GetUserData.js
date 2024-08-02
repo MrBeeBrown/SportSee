@@ -33,7 +33,7 @@ const GetUserData = ({ endpoint, id }) => {
     <div className='user__info'>
       {(data && data.length > 0) ? (
         <div>
-          <h2>Bonjour {data[0].userInfos.firstName}</h2>
+          <h2>Bonjour <span className='red__text'>{data[0].userInfos.firstName}</span></h2>
           <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </div>
       ) : (
