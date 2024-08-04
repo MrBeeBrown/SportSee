@@ -4,6 +4,10 @@ import BiaxialBarChart from '../charts/BiaxialBarChart';
 import SimpleLineChart from '../charts/SimpleLineChart';
 import SimpleRadarChart from '../charts/SimpleRadarChart';
 import SimplePieChart from '../charts/SimplePieChart';
+import User from '../models/User';
+import AverageSessions from '../models/AverageSessions';
+import Performances from '../models/Performances';
+import Activity from '../models/Activity';
 import energy from '../assets/energy.svg';
 import apple from '../assets/apple.svg';
 import chicken from '../assets/chicken.svg';
@@ -37,12 +41,30 @@ const GetData = ({ endpoint, id, type }) => {
     return <div>Error: {error.message}</div>;
   }
 
+  if (endpoint === 'user' && type === 'all') {
+    return (
+      <div>
+        {(data && data.length > 0) ? (
+          data.map((user) => (
+            <div>
+              <p>{user.userInfos.firstName}</p>
+              <p>{user.userInfos.lastName}</p>
+            </div>
+          ))
+        ) : (
+          <p>No data available</p>
+        )}
+      </div>
+    );
+  }
+
   if (endpoint === 'user' && type === 'false') {
+    const user = new User(data).toJSON();
     return (
       <div className='user__info'>
         {(data && data.length > 0) ? (
           <div>
-            <h2>Bonjour <span className='red__text'>{data[0].userInfos.firstName}</span></h2>
+            <h2>Bonjour <span className='red__text'>{user.firstName}</span></h2>
             <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           </div>
         ) : (
@@ -53,10 +75,11 @@ const GetData = ({ endpoint, id, type }) => {
   }
 
   if (endpoint === 'user' && type === 'score') {
+    const user = new User(data).userScore();
     return (
       <div className='user__score'>
         {(data && data.length > 0) ? (
-          <SimplePieChart data={data[0].score} />
+          <SimplePieChart data={user} />
         ) : (
           <p>No data available</p>
         )}
@@ -65,10 +88,11 @@ const GetData = ({ endpoint, id, type }) => {
   }
 
   if (endpoint === 'averageSessions' && type === 'false') {
+    const averageSessions = new AverageSessions(data).toJSON();
     return (
       <div className='user__week__session'>
         {(data && data.length > 0) ? (
-          <SimpleLineChart data={data[0].sessions} />
+          <SimpleLineChart data={averageSessions} />
         ) : (
           <p>No data available</p>
         )}
@@ -77,10 +101,11 @@ const GetData = ({ endpoint, id, type }) => {
   }
 
   if (endpoint === 'performance' && type === 'false') {
+    const performances = new Performances(data).toJSON();
     return (
       <div className='user__performance'>
         {(data && data.length > 0) ? (
-          <SimpleRadarChart data={data[0].data} />
+          <SimpleRadarChart data={performances} />
         ) : (
           <p>No data available</p>
         )}
@@ -89,10 +114,11 @@ const GetData = ({ endpoint, id, type }) => {
   }
 
   if (endpoint === 'activity' && type === 'false') {
+    const activity = new Activity(data).toJSON();
     return (
       <div className='user__week__activity'>
         {(data && data.length > 0) ? (
-          <BiaxialBarChart data={data[0].sessions} />
+          <BiaxialBarChart data={activity} />
         ) : (
           <p>No data available</p>
         )}
@@ -101,6 +127,7 @@ const GetData = ({ endpoint, id, type }) => {
   }
 
   if (endpoint === 'user' && type === 'nutrition') {
+    const user = new User(data).toJSON();
     return (
       <div className='user__nutrition'>
         {(data && data.length > 0) ? (
@@ -110,7 +137,7 @@ const GetData = ({ endpoint, id, type }) => {
                 <img src={energy} alt="energy" />
               </div>
               <div className='calories__data'>
-                <p className='nutrition__value'>{data[0].keyData.calorieCount.toLocaleString('en-US')}KCal</p>
+                <p className='nutrition__value'>{user.calorieCount.toLocaleString('en-US')}KCal</p>
                 <p className='nutrition__text'>Calories</p>
               </div>
             </div>
@@ -119,7 +146,7 @@ const GetData = ({ endpoint, id, type }) => {
                 <img src={chicken} alt="chicken" />
               </div>
               <div className='proteines__data'>
-                <p className='nutrition__value'>{data[0].keyData.proteinCount}g</p>
+                <p className='nutrition__value'>{user.proteinCount}g</p>
                 <p className='nutrition__text'>Proteines</p>
               </div>
             </div>
@@ -128,7 +155,7 @@ const GetData = ({ endpoint, id, type }) => {
                 <img src={apple} alt="apple" />
               </div>
               <div className='glucides__data'>
-                <p className='nutrition__value'>{data[0].keyData.carbohydrateCount}g</p>
+                <p className='nutrition__value'>{user.carbohydrateCount}g</p>
                 <p className='nutrition__text'>Glucides</p>
               </div>
             </div>
@@ -137,7 +164,7 @@ const GetData = ({ endpoint, id, type }) => {
                 <img src={cheeseburger} alt="cheeseburger" />
               </div>
               <div className='lipides__data'>
-                <p className='nutrition__value'>{data[0].keyData.lipidCount}g</p>
+                <p className='nutrition__value'>{user.lipidCount}g</p>
                 <p className='nutrition__text'>Lipides</p>
               </div>
             </div>

@@ -17,12 +17,12 @@ const endpoints = {
 
 // Fonction générique pour obtenir des données
 const ApiService = (endpoint, id) => {
-  if (!id || (id !== '12' && id !== '18')) {
-    throw new Error(`Vous devez fournir un identifiant.`);
-  }
-
   if (!endpoints[endpoint]) {
     throw new Error(`Vous devez fournir un endpoint valide.`);
+  }
+
+  if (endpoints[endpoint] === 'user' && !id) {
+    return apiClient.get(`/user/`);
   }
 
   if (endpoints[endpoint] === 'user') {

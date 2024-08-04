@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Yoga from '../assets/yoga.svg';
 import Dumbbell from '../assets/dumbbell.svg';
 import Swim from '../assets/swimming.svg';
@@ -8,10 +8,9 @@ import Header from './Header';
 import '../css/Home.css';
 
 function Home() {
-  const navigate = useNavigate();
-  const getLocation = (id) => {
-    navigate("./Profils/" + id)
-  }
+
+  const params = useParams();
+  const id = params.id;
 
   return (
     <div>
@@ -36,13 +35,20 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="user__selection">
-          <div className='all__user__info'>
-            <div className='users' onClick={() => getLocation(12)}>
-              <GetData endpoint={'user'} id={'12'} type={'all'} />
+        <div className="summary">
+          <GetData endpoint="user" id={id} type="false" />
+          <div className='user__activity'>
+
+            <div className='user__graph'>
+              <GetData endpoint="activity" id={id} type="false" />
+              <div className='user__session'>
+                <GetData endpoint="averageSessions" id={id} type="false" />
+                <GetData endpoint="performance" id={id} type="false" />
+                <GetData endpoint="user" id={id} type="score" />
+              </div>
             </div>
-            <div className='users' onClick={() => getLocation(18)}>
-              <GetData endpoint={'user'} id={'18'} type={'all'} />
+            <div className='nutrition__display'>
+              <GetData endpoint="user" id={id} type="nutrition" />
             </div>
           </div>
         </div>

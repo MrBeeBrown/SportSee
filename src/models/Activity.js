@@ -22,6 +22,48 @@ class Activity {
     this.calories6 = data[0].sessions[5].calories;
     this.calories7 = data[0].sessions[6].calories;
   }
+
+  toJSON() {
+    return (
+      [
+        {
+          "day": 1,
+          "Poids (Kg)": this.kilogram1,
+          "Calories brûlées (kCal)": this.calories1
+        },
+        {
+          "day": 2,
+          "Poids (Kg)": this.kilogram2,
+          "Calories brûlées (kCal)": this.calories2
+        },
+        {
+          "day": 3,
+          "Poids (Kg)": this.kilogram3,
+          "Calories brûlées (kCal)": this.calories3
+        },
+        {
+          "day": 4,
+          "Poids (Kg)": this.kilogram4,
+          "Calories brûlées (kCal)": this.calories4
+        },
+        {
+          "day": 5,
+          "Poids (Kg)": this.kilogram5,
+          "Calories brûlées (kCal)": this.calories5
+        },
+        {
+          "day": 6,
+          "Poids (Kg)": this.kilogram6,
+          "Calories brûlées (kCal)": this.calories6
+        },
+        {
+          "day": 7,
+          "Poids (Kg)": this.kilogram7,
+          "Calories brûlées (kCal)": this.calories7
+        }
+      ]
+    )
+  }
 }
 
 export default Activity;

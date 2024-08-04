@@ -12,17 +12,28 @@ class User {
   }
 
   toJSON() {
-    return {
-      id: this.id,
-      firstName: this.firstName,
-      lastName: this.lastName,
-      age: this.age,
-      score: this.score,
-      calorieCount: this.calorieCount,
-      proteinCount: this.proteinCount,
-      carbohydrateCount: this.carbohydrateCount,
-      lipidCount: this.lipidCount
-    }
+    return (
+      {
+        "id": this.id,
+        "firstName": this.firstName,
+        "lastName": this.lastName,
+        "age": this.age,
+        "score": this.score,
+        "calorieCount": this.calorieCount,
+        "proteinCount": this.proteinCount,
+        "carbohydrateCount": this.carbohydrateCount,
+        "lipidCount": this.lipidCount
+      }
+    )
+  }
+
+  userScore() {
+    return (
+      {
+        "name": "score",
+        "value": this.score
+      }
+    )
   }
 }
 
