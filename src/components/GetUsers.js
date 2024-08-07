@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import User from '../models/User';
 
-const GetAllUsers = ({ endpoint, id }) => {
+const GetUsers = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -45,4 +45,4 @@ const GetAllUsers = ({ endpoint, id }) => {
   );
 };
 
-export default GetAllUsers;
+export default GetUsers;
