@@ -1,13 +1,18 @@
 import { useParams } from 'react-router-dom';
+import GetUserName from './GetUserName';
+import GetUserActivity from './GetUserActivity';
+import GetUserSession from './GetUserSession';
+import GetUserPerformance from './GetUserPerformance';
+import GetUserScore from './GetUserScore';
+import GetUserNutrition from './GetUserNutrition';
 import Yoga from '../assets/yoga.svg';
 import Dumbbell from '../assets/dumbbell.svg';
 import Swim from '../assets/swimming.svg';
 import Bike from '../assets/bicycle.svg';
-import GetData from './GetData';
 import Header from './Header';
 import '../css/Home.css';
 
-function Home() {
+function Profils() {
 
   const params = useParams();
   const id = params.id;
@@ -36,19 +41,19 @@ function Home() {
           </div>
         </div>
         <div className="summary">
-          <GetData endpoint="user" id={id} type="false" />
+          <GetUserName endpoint="user" id={id} />
           <div className='user__activity'>
 
             <div className='user__graph'>
-              <GetData endpoint="activity" id={id} type="false" />
+              <GetUserActivity endpoint="activity" id={id} />
               <div className='user__session'>
-                <GetData endpoint="averageSessions" id={id} type="false" />
-                <GetData endpoint="performance" id={id} type="false" />
-                <GetData endpoint="user" id={id} type="score" />
+                <GetUserSession endpoint="averageSessions" id={id} />
+                <GetUserPerformance endpoint="performance" id={id} />
+                <GetUserScore endpoint="user" id={id} />
               </div>
             </div>
             <div className='nutrition__display'>
-              <GetData endpoint="user" id={id} type="nutrition" />
+              <GetUserNutrition endpoint="user" id={id} />
             </div>
           </div>
         </div>
@@ -57,4 +62,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Profils;

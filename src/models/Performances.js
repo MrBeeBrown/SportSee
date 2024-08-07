@@ -18,27 +18,27 @@ class Performances {
     return (
       [
         {
-          "kind": this.kind1,
+          "kind": "Cardio",
           "value": this.data1
         },
         {
-          "kind": this.kind2,
+          "kind": "Energie",
           "value": this.data2
         },
         {
-          "kind": this.kind3,
+          "kind": "Endurance",
           "value": this.data3
         },
         {
-          "kind": this.kind4,
+          "kind": "Force",
           "value": this.data4
         },
         {
-          "kind": this.kind5,
+          "kind": "Vitesse",
           "value": this.data5
         },
         {
-          "kind": this.kind6,
+          "kind": "Intensité",
           "value": this.data6
         }
       ]

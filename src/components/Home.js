@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
+import GetAllUsers from './GetAllUsers';
 import Yoga from '../assets/yoga.svg';
 import Dumbbell from '../assets/dumbbell.svg';
 import Swim from '../assets/swimming.svg';
 import Bike from '../assets/bicycle.svg';
-import GetData from './GetData';
 import Header from './Header';
 import '../css/Home.css';
 
@@ -39,10 +39,10 @@ function Home() {
         <div className="user__selection">
           <div className='all__user__info'>
             <div className='users' onClick={() => getLocation(12)}>
-              <GetData endpoint={'user'} id={'12'} type={'all'} />
+              <GetAllUsers endpoint={'user'} id={'12'} />
             </div>
             <div className='users' onClick={() => getLocation(18)}>
-              <GetData endpoint={'user'} id={'18'} type={'all'} />
+              <GetAllUsers endpoint={'user'} id={'18'} />
             </div>
           </div>
         </div>

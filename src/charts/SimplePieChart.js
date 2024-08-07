@@ -7,9 +7,10 @@ export default class SimplePieChart extends PureComponent {
     const { data } = this.props;
 
     return (
-      <ResponsiveContainer width="100%" height="100%" minWidth={260} minHeight={260}>
-        <PieChart width={260} height={260}>
-          <Pie dataKey="value" data={data} cx={500} cy={200} innerRadius={60} outerRadius={80} fill="#82ca9d" />
+      <ResponsiveContainer width="100%" height="100%" minWidth={200} minHeight={200}>
+        <PieChart width="33%" height="33%">
+          <Pie data={data} dataKey="value" startAngle={70}
+            endAngle={180} cx={200} cy={200} innerRadius={60} outerRadius={80} fill="#FF0000" />
           <Tooltip />
         </PieChart>
       </ResponsiveContainer>
