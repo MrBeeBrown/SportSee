@@ -10,7 +10,7 @@ export default class SimpleRadarChart extends PureComponent {
           <PolarGrid stroke='#FFFFFF' />
           <PolarAngleAxis dataKey="kind" axisLine={false} tickLine={false} stroke='#FFFFFF' />
           <PolarRadiusAxis axisLine={false} tick={false} />
-          <Radar dataKey="value" stroke="#FF0000" fill="#FF0000" fillOpacity={0.5} />
+          <Radar dataKey="value" stroke="#FF0000" fill="#FF0000" fillOpacity={0.6} />
         </RadarChart>
       </ResponsiveContainer>
     );

@@ -29,10 +29,12 @@ class User {
 
   userScore() {
     return (
-      {
-        "name": "score",
-        "value": this.score
-      }
+      [
+        {
+          "name": "score",
+          "value": this.score
+        }
+      ]
     )
   }
 }

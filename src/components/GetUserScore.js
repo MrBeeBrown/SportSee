@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
-import SimplePieChart from '../charts/SimplePieChart';
 import User from '../models/User';
 
 const GetUserScore = ({ endpoint, id }) => {
@@ -32,13 +31,22 @@ const GetUserScore = ({ endpoint, id }) => {
   }
 
   const user = new User(data).userScore();
+  const score = user[0].value * 100;
+  const percent = (101 - (101 * score) / 100);
   return (
     <div className='user__score'>
-      {(data && data.length > 0) ? (
-        <SimplePieChart data={user} />
-      ) : (
-        <p>No data available</p>
-      )}
+      <svg viewBox="0 0 36 36" className="circle-svg">
+        <circle className='first__circle' cx="18" cy="18" r="12" strokeDashoffset={percent}></circle>
+        <circle className='second__circle' cx="18" cy="18" r="11"></circle>
+      </svg>
+      <div className='score__title'>
+        <p>Score</p>
+      </div>
+      <div className='score__value'>
+        <p>{score}%</p>
+        <p>de votre</p>
+        <p>objectif</p>
+      </div>
     </div>
   );
 };
