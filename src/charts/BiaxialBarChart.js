@@ -12,8 +12,8 @@ export default class BiaxialBarChart extends PureComponent {
       if (active) {
         return (
           <div className="custom-tooltip">
-            <p className="label">{`${payload[0].value}`}</p>
-            <p className="label">{`${payload[1].value}`}</p>
+            <p className="label">{`${payload[0].value}kg`}</p>
+            <p className="label">{`${payload[1].value}Kcal`}</p>
           </div>
         );
       }
@@ -21,7 +21,7 @@ export default class BiaxialBarChart extends PureComponent {
     }
 
     return (
-      <ResponsiveContainer width="100%" height="100%" minWidth={300} minHeight={320} >
+      <ResponsiveContainer width="100%" height="100%" minHeight={320} >
         <BarChart data={data} margin={{ top: 30, right: 10, left: 10, bottom: 10 }} barSize={10}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis dataKey="day" tickMargin={10} tickLine={false} />

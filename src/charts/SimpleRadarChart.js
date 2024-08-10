@@ -5,7 +5,7 @@ export default class SimpleRadarChart extends PureComponent {
   render() {
     const { data } = this.props;
     return (
-      <ResponsiveContainer width="100%" height="100%" minWidth={200} minHeight={200} >
+      <ResponsiveContainer width="100%" height="100%" >
         <RadarChart cx="50%" cy="50%" outerRadius="60%" data={data}  >
           <PolarGrid stroke='#FFFFFF' />
           <PolarAngleAxis dataKey="kind" axisLine={false} tickLine={false} stroke='#FFFFFF' />
