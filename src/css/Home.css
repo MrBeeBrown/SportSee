@@ -35,9 +35,11 @@ h2 {
 
 .all__user__info {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  width: 270px;
   gap: 3.5rem;
 }
 
@@ -145,11 +147,6 @@ h2 {
   border-radius: 6px;
   padding: .5rem;
 }
-
-/* .nutrition__display {
-  width: 100%;
-  height: 100%;
-} */
 
 .user__nutrition {
   height: 100%;

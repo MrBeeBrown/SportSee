@@ -30,8 +30,8 @@ const GetUserScore = ({ endpoint, id }) => {
     return <div>Error: {error.message}</div>;
   }
 
-  const user = new User(data).userScore();
-  const score = user[0].value * 100;
+  const user = new User(data).toJSON();
+  const score = user.score * 100;
   const percent = (101 - (101 * score) / 100);
   return (
     <div className='user__score'>

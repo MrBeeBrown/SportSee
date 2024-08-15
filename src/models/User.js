@@ -26,17 +26,6 @@ class User {
       }
     )
   }
-
-  userScore() {
-    return (
-      [
-        {
-          "name": "score",
-          "value": this.score
-        }
-      ]
-    )
-  }
 }
 
 export default User;
