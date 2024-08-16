@@ -3,6 +3,11 @@ import './components/Header.js';
 import Home from './components/Home';
 import Profils from './components/Profils';
 
+/**
+ * Renders the main application component.
+ *
+ * @return {JSX.Element} The rendered application component.
+ */
 function App() {
   return (
     <BrowserRouter>

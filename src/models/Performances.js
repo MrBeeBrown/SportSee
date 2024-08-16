@@ -1,4 +1,10 @@
 class Performances {
+  /**
+   * Initializes a new instance of the Performances class.
+   *
+   * @param {Object} data - The data object containing kind and data properties.
+   * @return {undefined}
+   */
   constructor(data) {
     this.kind1 = data.data.kind[1];
     this.kind2 = data.data.kind[2];
@@ -14,6 +20,11 @@ class Performances {
     this.data6 = data.data.data[5].value;
   }
 
+  /**
+   * Converts the Performances object to a JSON representation.
+   *
+   * @return {Array<Object>} An array of objects containing kind and value properties.
+   */
   toJSON() {
     return (
       [

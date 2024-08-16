@@ -6,6 +6,14 @@ import apple from '../assets/apple.svg';
 import chicken from '../assets/chicken.svg';
 import cheeseburger from '../assets/cheeseburger.svg';
 
+/**
+ * Retrieves user nutrition data from the API and renders a card with nutrition information.
+ *
+ * @param {string} endpoint - The API endpoint to fetch data from.
+ * @param {number} id - The user ID to fetch data for.
+ * @param {string} type - The type of nutrition data to fetch.
+ * @return {JSX.Element} A card with nutrition information or an error/loading message.
+ */
 const GetUserNutrition = ({ endpoint, id, type }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);

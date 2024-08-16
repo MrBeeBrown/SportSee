@@ -12,6 +12,13 @@ import Bike from '../assets/bicycle.svg';
 import Header from './Header';
 import '../css/Home.css';
 
+/**
+ * A React component that renders the profile page of a user.
+ * 
+ * It fetches and displays the user's activity, sessions, performance, score, and nutrition data.
+ * 
+ * @return {JSX.Element} The JSX element representing the profile page.
+ */
 function Profils() {
 
   const params = useParams();

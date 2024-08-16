@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.svg';
 
+
+/**
+ * A React component that renders the header section of the application.
+ * 
+ * @return {JSX.Element} The JSX element representing the header section.
+ */
 function Header() {
   return (
     <header>

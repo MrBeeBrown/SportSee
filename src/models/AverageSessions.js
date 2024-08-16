@@ -1,4 +1,14 @@
 class AverageSessions {
+  /**
+   * Initializes an instance of AverageSessions with the provided data.
+   *
+   * @param {object} data - The data object containing sessions information.
+   * @param {object} data.data - The nested data object.
+   * @param {array} data.data.sessions - An array of session objects.
+   * @param {number} data.data.sessions[].day - The day of the session (1-7).
+   * @param {number} data.data.sessions[].sessionLength - The length of the session.
+   * @return {undefined}
+   */
   constructor(data) {
     this.day1 = data.data.sessions[0].day;
     this.day2 = data.data.sessions[1].day;
@@ -16,6 +26,12 @@ class AverageSessions {
     this.sessionsLength7 = data.data.sessions[6].sessionLength;
   }
 
+  /**
+   * Converts the object to a JSON representation.
+   *
+   * @return {Array<Object>} An array of objects representing the days and their corresponding session lengths.
+   *                         Each object has the properties "day" (string) and "sessionsLength" (number).
+   */
   toJSON() {
     return (
       [

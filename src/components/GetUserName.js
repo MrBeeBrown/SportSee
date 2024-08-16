@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import User from '../models/User';
 
+/**
+ * Retrieves user data from the specified endpoint and id, and displays a greeting message.
+ *
+ * @param {string} endpoint - The API endpoint to fetch user data from.
+ * @param {string} id - The user's id.
+ * @return {JSX.Element} A JSX element displaying the user's greeting message or an error/loading message.
+ */
 const GetUserName = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);

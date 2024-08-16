@@ -3,6 +3,14 @@ import ApiService from '../api/apiService';
 import SimpleLineChart from '../charts/SimpleLineChart';
 import AverageSessions from '../models/AverageSessions';
 
+
+/**
+ * Retrieves user session data from the API and renders a line chart of average sessions.
+ *
+ * @param {string} endpoint - The API endpoint to fetch data from.
+ * @param {number} id - The user ID to fetch data for.
+ * @return {JSX.Element} A line chart of average sessions or an error/loading message.
+ */
 const GetUserSession = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);

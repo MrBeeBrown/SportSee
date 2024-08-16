@@ -1,4 +1,10 @@
 class User {
+  /**
+   * Initializes a new User object with the provided data.
+   *
+   * @param {Object} data - The data used to initialize the User object.
+   * @return {undefined}
+   */
   constructor(data) {
     this.id = data.data.id;
     this.firstName = data.data.userInfos.firstName;
@@ -11,6 +17,11 @@ class User {
     this.lipidCount = data.data.keyData.lipidCount;
   }
 
+  /**
+   * Converts the User object to a JSON representation.
+   *
+   * @return {Object} A JSON object containing the user's data.
+   */
   toJSON() {
     return (
       {

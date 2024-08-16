@@ -5,7 +5,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 h2 {
@@ -69,11 +69,11 @@ h2 {
 
 .user__activity {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 70% 30%;
   max-width: 1440px;
   width: 100%;
   height: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .user__week__activity {
@@ -162,13 +162,13 @@ h2 {
 }
 
 .card {
-  width: 260px;
-  height: 125px;
+  width: 240px;
+  height: 110px;
   border-radius: 5px;
   background-color: #F6F6F6;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .icons {
@@ -178,7 +178,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .nutrition__text {
@@ -252,4 +252,30 @@ h2 {
 
 .second__circle {
   fill: #FFFFFF;
+}
+
+@media screen and (max-width: 1024px) {
+  .user__week__session {
+    max-width: 180px;
+    max-height: 180px;
+    background-color: #FF0000;
+    border-radius: 6px;
+    padding: .5rem;
+  }
+
+  .user__performance {
+    max-width: 180px;
+    max-height: 180px;
+    background-color: #282D30;
+    border-radius: 6px;
+    padding: .5rem;
+  }
+
+  .user__performance {
+    max-width: 180px;
+    max-height: 180px;
+    background-color: #282D30;
+    border-radius: 6px;
+    padding: .5rem;
+  }
 }
