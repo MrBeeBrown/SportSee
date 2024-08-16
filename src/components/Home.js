@@ -12,7 +12,6 @@ import '../css/Home.css';
  * It renders the main page with activity menu and user selection.
  * It also handles navigation to user profiles.
  *
- * @return {JSX.Element} The JSX element representing the main page.
  */
 function Home() {
   const navigate = useNavigate();
@@ -21,7 +20,7 @@ function Home() {
  * Navigates to the user profile page based on the provided user ID.
  *
  * @param {number} id - The ID of the user to navigate to.
- * @return {void} No return value, navigates to the user profile page.
+ * @return {JSX.Element} The JSX element representing the header and the main section with the user selection.
  */
   const getLocation = (id) => {
     navigate("./Profils/" + id)

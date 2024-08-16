@@ -6,9 +6,8 @@ import Activity from '../models/Activity';
 /**
  * Retrieves user activity data from the API and renders a biaxial bar chart of the activity.
  *
- * @param {Object} props - The props object containing the endpoint and id.
- * @param {string} props.endpoint - The API endpoint to fetch data from.
- * @param {number} props.id - The user ID to fetch data for.
+ * @param {string} endpoint - The API endpoint to fetch data from.
+ * @param {number} id - The user ID to fetch data for.
  * @return {JSX.Element} A biaxial bar chart of user activity or an error/loading message.
  */
 const GetUserActivity = ({ endpoint, id }) => {

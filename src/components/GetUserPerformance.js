@@ -3,7 +3,6 @@ import ApiService from '../api/apiService';
 import SimpleRadarChart from '../charts/SimpleRadarChart';
 import Performances from '../models/Performances';
 
-
 /**
  * Retrieves user performance data from the API and renders a radar chart of performances.
  *

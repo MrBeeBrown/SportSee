@@ -3,7 +3,6 @@ class User {
    * Initializes a new User object with the provided data.
    *
    * @param {Object} data - The data used to initialize the User object.
-   * @return {undefined}
    */
   constructor(data) {
     this.id = data.data.id;

@@ -3,7 +3,6 @@ import ApiService from '../api/apiService';
 import SimpleLineChart from '../charts/SimpleLineChart';
 import AverageSessions from '../models/AverageSessions';
 
-
 /**
  * Retrieves user session data from the API and renders a line chart of average sessions.
  *

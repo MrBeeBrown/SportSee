@@ -3,13 +3,10 @@ class Activity {
    * Initializes a new instance of the Activity class.
    *
    * @param {object} data - The data object containing sessions information.
-   * @param {object} data.data - The nested data object.
    * @param {array} data.data.sessions - An array of session objects.
-   * @param {object} data.data.sessions[] - A session object.
    * @param {string} data.data.sessions[].day - The day of the session.
    * @param {number} data.data.sessions[].kilogram - The kilogram value of the session.
    * @param {number} data.data.sessions[].calories - The calories value of the session.
-   * @return {undefined}
    */
   constructor(data) {
     this.day1 = data.data.sessions[0].day;

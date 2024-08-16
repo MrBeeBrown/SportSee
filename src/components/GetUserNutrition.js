@@ -11,10 +11,9 @@ import cheeseburger from '../assets/cheeseburger.svg';
  *
  * @param {string} endpoint - The API endpoint to fetch data from.
  * @param {number} id - The user ID to fetch data for.
- * @param {string} type - The type of nutrition data to fetch.
  * @return {JSX.Element} A card with nutrition information or an error/loading message.
  */
-const GetUserNutrition = ({ endpoint, id, type }) => {
+const GetUserNutrition = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

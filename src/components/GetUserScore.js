@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import User from '../models/User';
 
-
 /**
  * Retrieves and displays a user's score based on the provided endpoint and id.
  *

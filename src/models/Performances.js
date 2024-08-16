@@ -3,7 +3,6 @@ class Performances {
    * Initializes a new instance of the Performances class.
    *
    * @param {Object} data - The data object containing kind and data properties.
-   * @return {undefined}
    */
   constructor(data) {
     this.kind1 = data.data.kind[1];
