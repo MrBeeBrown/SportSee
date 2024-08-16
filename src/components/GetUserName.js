@@ -33,7 +33,7 @@ const GetUserName = ({ endpoint, id }) => {
   const user = new User(data).toJSON();
   return (
     <div className='user__info'>
-      {(data && data.length > 0) ? (
+      {(data) ? (
         <div>
           <h2>Bonjour <span className='red__text'>{user.firstName}</span></h2>
           <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>

@@ -4,7 +4,7 @@ import axios from 'axios';
 const apiClient = axios.create({
   baseURL: 'http://localhost:3500',
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'text/plain; charset=utf-8'
   },
 });
 
@@ -17,12 +17,9 @@ const endpoints = {
 
 // Fonction générique pour obtenir des données
 const ApiService = (endpoint, id) => {
+
   if (!endpoints[endpoint]) {
     throw new Error(`Vous devez fournir un endpoint valide.`);
-  }
-
-  if (endpoints[endpoint] === 'user' && !id) {
-    return apiClient.get(`/user/`);
   }
 
   if (endpoints[endpoint] === 'user') {
@@ -30,6 +27,7 @@ const ApiService = (endpoint, id) => {
   } else {
     return apiClient.get(`/user/${id}/${endpoints[endpoint]}`);
   }
+
 };
 
 export default ApiService

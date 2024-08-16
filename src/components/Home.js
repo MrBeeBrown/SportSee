@@ -39,10 +39,10 @@ function Home() {
         <div className="user__selection">
           <div className='all__user__info'>
             <div className='users' onClick={() => getLocation(12)}>
-              <GetUsers endpoint={'user'} id={'12'} />
+              <GetUsers endpoint={'user'} id={12} />
             </div>
             <div className='users' onClick={() => getLocation(18)}>
-              <GetUsers endpoint={'user'} id={'18'} />
+              <GetUsers endpoint={'user'} id={18} />
             </div>
           </div>
         </div>

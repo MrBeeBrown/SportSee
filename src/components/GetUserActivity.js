@@ -34,7 +34,7 @@ const GetUserActivity = ({ endpoint, id }) => {
   const activity = new Activity(data).toJSON();
   return (
     <div className='user__week__activity'>
-      {(data && data.length > 0) ? (
+      {(data) ? (
         <BiaxialBarChart data={activity} />
       ) : (
         <p>No data available</p>

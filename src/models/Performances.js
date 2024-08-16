@@ -1,17 +1,17 @@
 class Performances {
   constructor(data) {
-    this.kind1 = data[0].kind[1];
-    this.kind2 = data[0].kind[2];
-    this.kind3 = data[0].kind[3];
-    this.kind4 = data[0].kind[4];
-    this.kind5 = data[0].kind[5];
-    this.kind6 = data[0].kind[6];
-    this.data1 = data[0].data[0].value;
-    this.data2 = data[0].data[1].value;
-    this.data3 = data[0].data[2].value;
-    this.data4 = data[0].data[3].value;
-    this.data5 = data[0].data[4].value;
-    this.data6 = data[0].data[5].value;
+    this.kind1 = data.data.kind[1];
+    this.kind2 = data.data.kind[2];
+    this.kind3 = data.data.kind[3];
+    this.kind4 = data.data.kind[4];
+    this.kind5 = data.data.kind[5];
+    this.kind6 = data.data.kind[6];
+    this.data1 = data.data.data[0].value;
+    this.data2 = data.data.data[1].value;
+    this.data3 = data.data.data[2].value;
+    this.data4 = data.data.data[3].value;
+    this.data5 = data.data.data[4].value;
+    this.data6 = data.data.data[5].value;
   }
 
   toJSON() {

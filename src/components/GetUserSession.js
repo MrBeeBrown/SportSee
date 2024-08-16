@@ -34,7 +34,7 @@ const GetUserSession = ({ endpoint, id }) => {
   const averageSessions = new AverageSessions(data).toJSON();
   return (
     <div className='user__week__session'>
-      {(data && data.length > 0) ? (
+      {(data) ? (
         <SimpleLineChart data={averageSessions} />
       ) : (
         <p>No data available</p>

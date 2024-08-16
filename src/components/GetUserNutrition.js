@@ -37,7 +37,7 @@ const GetUserNutrition = ({ endpoint, id, type }) => {
   const user = new User(data).toJSON();
   return (
     <div className='user__nutrition'>
-      {(data && data.length > 0) ? (
+      {(data) ? (
         <div className='nutrition__card'>
           <div className='calories card'>
             <div className='energy__icons icons'>

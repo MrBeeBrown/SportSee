@@ -33,7 +33,7 @@ const GetUsers = ({ endpoint, id }) => {
   const user = new User(data).toJSON();
   return (
     <div>
-      {(data && data.length > 0) ? (
+      {(data) ? (
         <div>
           <p>{user.firstName}</p>
           <p>{user.lastName}</p>

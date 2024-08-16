@@ -1,14 +1,14 @@
 class User {
   constructor(data) {
-    this.id = data[0].id;
-    this.firstName = data[0].userInfos.firstName;
-    this.lastName = data[0].userInfos.lastName;
-    this.age = data[0].userInfos.age;
-    this.score = data[0].score || data[0].todayScore;
-    this.calorieCount = data[0].keyData.calorieCount;
-    this.proteinCount = data[0].keyData.proteinCount;
-    this.carbohydrateCount = data[0].keyData.carbohydrateCount;
-    this.lipidCount = data[0].keyData.lipidCount;
+    this.id = data.data.id;
+    this.firstName = data.data.userInfos.firstName;
+    this.lastName = data.data.userInfos.lastName;
+    this.age = data.data.userInfos.age;
+    this.score = data.data.score || data.data.todayScore;
+    this.calorieCount = data.data.keyData.calorieCount;
+    this.proteinCount = data.data.keyData.proteinCount;
+    this.carbohydrateCount = data.data.keyData.carbohydrateCount;
+    this.lipidCount = data.data.keyData.lipidCount;
   }
 
   toJSON() {

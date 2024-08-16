@@ -34,7 +34,7 @@ const GetUserPerformance = ({ endpoint, id }) => {
   const performances = new Performances(data).toJSON();
   return (
     <div className='user__performance'>
-      {(data && data.length > 0) ? (
+      {(data) ? (
         <SimpleRadarChart data={performances} />
       ) : (
         <p>No data available</p>
