@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import SimpleLineChart from '../charts/SimpleLineChart';
 import AverageSessions from '../models/AverageSessions';
+import { PropTypes } from 'prop-types';
 
 /**
  * Retrieves user session data from the API and renders a line chart of average sessions.
@@ -49,5 +50,10 @@ const GetUserSession = ({ endpoint, id }) => {
     </div>
   );
 };
+
+GetUserSession.propTypes = {
+  endpoint: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+}
 
 export default GetUserSession;

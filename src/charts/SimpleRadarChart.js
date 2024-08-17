@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { PropTypes } from 'prop-types';
 
 export default class SimpleRadarChart extends PureComponent {
   /**
@@ -22,4 +23,8 @@ export default class SimpleRadarChart extends PureComponent {
       </ResponsiveContainer>
     );
   }
+}
+
+SimpleRadarChart.propTypes = {
+  data: PropTypes.array.isRequired
 }

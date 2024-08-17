@@ -1,4 +1,8 @@
-class Activity {
+import { Component } from "react";
+import { PropTypes } from "prop-types";
+
+
+class Activity extends Component {
   /**
    * Initializes a new instance of the Activity class.
    *
@@ -9,6 +13,7 @@ class Activity {
    * @param {number} data.data.sessions[].calories - The calories value of the session.
    */
   constructor(data) {
+    super(data);
     this.day1 = data.data.sessions[0].day;
     this.day2 = data.data.sessions[1].day;
     this.day3 = data.data.sessions[2].day;
@@ -81,6 +86,10 @@ class Activity {
       ]
     )
   }
+}
+
+Activity.propTypes = {
+  data: PropTypes.object
 }
 
 export default Activity;

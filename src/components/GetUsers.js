@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import User from '../models/User';
+import PropTypes from 'prop-types';
 
 /**
  * Retrieves user data from the specified endpoint and id.
@@ -51,5 +52,10 @@ const GetUsers = ({ endpoint, id }) => {
     </div>
   );
 };
+
+GetUsers.propTypes = {
+  endpoint: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+}
 
 export default GetUsers;

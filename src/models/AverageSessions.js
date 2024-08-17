@@ -1,4 +1,7 @@
-class AverageSessions {
+import { Component } from "react";
+import { PropTypes } from "prop-types";
+
+class AverageSessions extends Component {
   /**
    * Initializes an instance of AverageSessions with the provided data.
    *
@@ -8,6 +11,7 @@ class AverageSessions {
    * @param {number} data.data.sessions[].sessionLength - The length of the session.
    */
   constructor(data) {
+    super(data);
     this.day1 = data.data.sessions[0].day;
     this.day2 = data.data.sessions[1].day;
     this.day3 = data.data.sessions[2].day;
@@ -64,6 +68,10 @@ class AverageSessions {
       ]
     )
   }
+}
+
+AverageSessions.propTypes = {
+  data: PropTypes.object
 }
 
 export default AverageSessions;

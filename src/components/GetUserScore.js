@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import User from '../models/User';
+import PropTypes from 'prop-types';
 
 /**
  * Retrieves and displays a user's score based on the provided endpoint and id.
@@ -8,7 +9,8 @@ import User from '../models/User';
  * @param {string} endpoint - The API endpoint to fetch user data from.
  * @param {number} id - The user's id.
  * @return {JSX.Element} The user's score component.
- */
+*/
+
 const GetUserScore = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -57,5 +59,10 @@ const GetUserScore = ({ endpoint, id }) => {
     </div>
   );
 };
+
+GetUserScore.propTypes = {
+  endpoint: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+}
 
 export default GetUserScore;

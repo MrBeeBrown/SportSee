@@ -1,10 +1,14 @@
-class Performances {
+import { Component } from "react";
+import { PropTypes } from "prop-types";
+
+class Performances extends Component {
   /**
    * Initializes a new instance of the Performances class.
    *
    * @param {Object} data - The data object containing kind and data properties.
    */
   constructor(data) {
+    super(data);
     this.kind1 = data.data.kind[1];
     this.kind2 = data.data.kind[2];
     this.kind3 = data.data.kind[3];
@@ -54,6 +58,10 @@ class Performances {
       ]
     )
   }
+}
+
+Performances.propTypes = {
+  data: PropTypes.object
 }
 
 export default Performances;

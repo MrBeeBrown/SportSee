@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
+import { PropTypes } from 'prop-types';
 
 export default class SimpleLineChart extends PureComponent {
 
@@ -34,10 +35,14 @@ export default class SimpleLineChart extends PureComponent {
           <XAxis dataKey="day" stroke='#FFFFFF' tickLine={false} axisLine={false} />
           <YAxis hide={true} />
           <Tooltip content={<CustomTooltip />} />
-          <Line type="basis" dot={false} dataKey="sessionsLength" stroke="#FFFFFF" strokeWidth={2} activeDot={{ r: 6 }} />
+          <Line type="bump" dot={false} dataKey="sessionsLength" stroke="#FFFFFF" strokeWidth={2} activeDot={{ r: 6 }} />
           <ReferenceArea x1={"S"} x2={"D"} y1={0} y2={60} fill="000000" />
         </LineChart>
       </ResponsiveContainer>
     );
   }
+}
+
+SimpleLineChart.propTypes = {
+  data: PropTypes.array.isRequired
 }

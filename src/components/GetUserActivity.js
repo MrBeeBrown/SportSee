@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
+import PropTypes from 'prop-types';
 import BiaxialBarChart from '../charts/BiaxialBarChart';
 import Activity from '../models/Activity';
 
@@ -49,5 +50,10 @@ const GetUserActivity = ({ endpoint, id }) => {
     </div>
   )
 };
+
+GetUserActivity.propTypes = {
+  endpoint: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+}
 
 export default GetUserActivity;

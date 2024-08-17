@@ -1,10 +1,14 @@
-class User {
+import { Component } from "react";
+import { PropTypes } from "prop-types";
+
+class User extends Component {
   /**
    * Initializes a new User object with the provided data.
    *
    * @param {Object} data - The data used to initialize the User object.
    */
   constructor(data) {
+    super(data);
     this.id = data.data.id;
     this.firstName = data.data.userInfos.firstName;
     this.lastName = data.data.userInfos.lastName;
@@ -36,6 +40,10 @@ class User {
       }
     )
   }
+}
+
+User.propTypes = {
+  data: PropTypes.object
 }
 
 export default User;

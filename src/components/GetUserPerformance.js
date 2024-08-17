@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import SimpleRadarChart from '../charts/SimpleRadarChart';
 import Performances from '../models/Performances';
+import PropTypes from 'prop-types';
 
 /**
  * Retrieves user performance data from the API and renders a radar chart of performances.
@@ -49,5 +50,10 @@ const GetUserPerformance = ({ endpoint, id }) => {
     </div>
   )
 };
+
+GetUserPerformance.propTypes = {
+  endpoint: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+}
 
 export default GetUserPerformance;

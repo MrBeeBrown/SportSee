@@ -17,11 +17,11 @@ function Home() {
   const navigate = useNavigate();
 
   /**
- * Navigates to the user profile page based on the provided user ID.
- *
- * @param {number} id - The ID of the user to navigate to.
- * @return {JSX.Element} The JSX element representing the header and the main section with the user selection.
- */
+  * Navigates to the user profile page based on the provided user ID.
+  *
+  * @param {number} id - The ID of the user to navigate to.
+  * @return {JSX.Element} The JSX element representing the header and the main section with the user selection.
+  */
   const getLocation = (id) => {
     navigate("./Profils/" + id)
   }

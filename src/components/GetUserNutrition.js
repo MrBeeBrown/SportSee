@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
+import PropTypes from 'prop-types';
 import User from '../models/User';
 import energy from '../assets/energy.svg';
 import apple from '../assets/apple.svg';
@@ -89,5 +90,10 @@ const GetUserNutrition = ({ endpoint, id }) => {
     </div>
   )
 };
+
+GetUserNutrition.propTypes = {
+  endpoint: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+}
 
 export default GetUserNutrition;

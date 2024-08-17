@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
+import PropTypes from 'prop-types';
 import User from '../models/User';
 
 /**
@@ -8,11 +9,12 @@ import User from '../models/User';
  * @param {string} endpoint - The API endpoint to fetch user data from.
  * @param {string} id - The user's id.
  * @return {JSX.Element} A JSX element displaying the user's greeting message or an error/loading message.
- */
+*/
 const GetUserName = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
 
   useEffect(() => {
     setLoading(true);
@@ -28,6 +30,7 @@ const GetUserName = ({ endpoint, id }) => {
         setLoading(false);
       });
   }, [endpoint, id]);
+
 
   if (loading) {
     return <div>Loading...</div>;
@@ -51,5 +54,10 @@ const GetUserName = ({ endpoint, id }) => {
     </div>
   );
 };
+
+GetUserName.propTypes = {
+  endpoint: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+}
 
 export default GetUserName;

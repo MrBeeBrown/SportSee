@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import { PropTypes } from 'prop-types';
 
 
 export default class BiaxialBarChart extends PureComponent {
@@ -48,4 +48,8 @@ export default class BiaxialBarChart extends PureComponent {
       </ResponsiveContainer>
     );
   }
+}
+
+BiaxialBarChart.propTypes = {
+  data: PropTypes.array.isRequired
 }

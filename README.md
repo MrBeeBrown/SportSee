@@ -7,16 +7,16 @@
 
 <div align="center">
 
-![Status](https://img.shields.io/badge/status-active-success.svg)
-![GitHub Language Count](https://img.shields.io/github/languages/count/MrBeeBrown/sportsee?color=purple)
-![Repo Size](https://img.shields.io/github/repo-size/MrBeeBrown/sportsee?color=orange)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![OpenClassRooms](https://img.shields.io/badge/Project-OpenClassRooms-purple)
+![Projet Number](https://img.shields.io/badge/Project-N%C2%B012-blue)
+![GitHub Language Count](https://img.shields.io/github/languages/count/MrBeeBrown/kasa-web?color=darkgreen)
+![Repo Size](https://img.shields.io/github/repo-size/MrBeeBrown/kasa-web?color=orange)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Website project dedicated to sports coaching.
     <br> 
 </p>
 
@@ -24,14 +24,18 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
 - [Usage](#usage)
+- [Deployment](#deployment)
 - [Built Using](#built_using)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+The website will allow a user to track the number of sessions completed as well as the number of calories burned.
+
+Data is retrieved from a backend using NodeJS . It will allow HTTP calls to be made in order to retrieve user data.
+
+API calls are made with a service using Axios.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -63,26 +67,6 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo.
 
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## 🎈 Usage <a name="usage"></a>
 
 Add notes about how to use the system.
@@ -93,10 +77,10 @@ Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [React](https://react.dev/) - Development Library
+- [React Router](https://reactrouter.com/en/main) - JavaScript library used to handle navigation in React applications
+- [Axios](https://axios-http.com/) - A promise-based HTTP Client for node.js and the browser
+- [Recharts](https://recharts.org/en-US) - A composable charting library built on React components
 
 ## ✍️ Authors <a name = "authors"></a>
 
