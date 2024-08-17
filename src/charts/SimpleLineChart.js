@@ -3,6 +3,16 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 
 export default class SimpleLineChart extends PureComponent {
 
+  /**
+   * Render a simple line chart with a custom tooltip.
+   *
+   * This function takes the chart data from the component's props and renders a line chart
+   * with a custom tooltip that displays the session length in minutes.
+   *
+   * @param {object} props - The component's props.
+   * @param {array} props.data - The chart data.
+   * @return {JSX.Element} The rendered line chart.
+   */
   render() {
     const { data } = this.props;
 
@@ -24,7 +34,7 @@ export default class SimpleLineChart extends PureComponent {
           <XAxis dataKey="day" stroke='#FFFFFF' tickLine={false} axisLine={false} />
           <YAxis hide={true} />
           <Tooltip content={<CustomTooltip />} />
-          <Line type="natural" dot={false} dataKey="sessionsLength" stroke="#FFFFFF" strokeWidth={2} activeDot={{ r: 6 }} />
+          <Line type="basis" dot={false} dataKey="sessionsLength" stroke="#FFFFFF" strokeWidth={2} activeDot={{ r: 6 }} />
           <ReferenceArea x1={"S"} x2={"D"} y1={0} y2={60} fill="000000" />
         </LineChart>
       </ResponsiveContainer>

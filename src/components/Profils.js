@@ -17,7 +17,7 @@ import '../css/Home.css';
  * 
  * It fetches and displays the user's activity, sessions, performance, score, and nutrition data.
  * 
- * @return {JSX.Element} The JSX element representing the header and the main page with the user datas.
+ * @return {JSX.Element} The JSX element representing the header and the main page with the user datas and graphics.
  */
 function Profils() {
 

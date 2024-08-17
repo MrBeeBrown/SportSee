@@ -5,9 +5,22 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 
 export default class BiaxialBarChart extends PureComponent {
 
+  /**
+   * Renders a biaxial bar chart with a custom tooltip.
+   *
+   * @param {object} props - The component's props.
+   * @return {JSX.Element} The rendered bar chart.
+   */
   render() {
     const { data } = this.props;
 
+    /**
+     * A custom tooltip component for displaying data in a chart.
+     *
+     * @param {object} payload - The data to be displayed in the tooltip.
+     * @param {boolean} active - Whether the tooltip is currently active.
+     * @return {JSX.Element|null} The rendered tooltip element, or null if inactive.
+     */
     function CustomTooltip({ payload, active }) {
       if (active) {
         return (

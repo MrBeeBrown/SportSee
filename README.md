@@ -7,7 +7,6 @@
 
 <div align="center">
 
-![GitHub User](https://img.shields.io/badge/I_am-MrBeeBrown-darkgreen)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 ![GitHub Language Count](https://img.shields.io/github/languages/count/MrBeeBrown/sportsee?color=purple)
 ![Repo Size](https://img.shields.io/github/repo-size/MrBeeBrown/sportsee?color=orange)

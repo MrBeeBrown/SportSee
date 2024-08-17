@@ -91,6 +91,8 @@ h2 {
 
 .user__week__session {
   max-width: 333px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
   background-color: #FF0000;
   border-radius: 6px;
   padding: .5rem;
@@ -98,6 +100,8 @@ h2 {
 
 .user__score {
   max-width: 333px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
   background-color: #F6F6F6;
   border-radius: 6px;
   position: relative;
@@ -117,8 +121,11 @@ h2 {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 36%;
-  left: 38%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
   width: 60px;
 }
 
@@ -143,6 +150,8 @@ h2 {
 
 .user__performance {
   max-width: 333px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
   background-color: #282D30;
   border-radius: 6px;
   padding: .5rem;
@@ -254,7 +263,7 @@ h2 {
   fill: #FFFFFF;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .user__week__session {
     max-width: 180px;
     max-height: 180px;
@@ -278,4 +287,4 @@ h2 {
     border-radius: 6px;
     padding: .5rem;
   }
-}
+} */
