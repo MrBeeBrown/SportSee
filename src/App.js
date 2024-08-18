@@ -4,9 +4,10 @@ import Home from './components/Home';
 import Profils from './components/Profils';
 
 /**
- * Renders the main application component.
+ * A React functional component that serves as the main application entry point.
+ * It configures client-side routing using React Router and renders the corresponding components based on the URL path.
  *
- * @return {JSX.Element} The rendered application component.
+ * @return {JSX.Element} A JSX element representing the application with routing configuration.
  */
 function App() {
   return (

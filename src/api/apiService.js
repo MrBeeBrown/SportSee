@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// Configuration d'Axios (vous pouvez configurer l'URL de base ici si nécessaire)
 const apiClient = axios.create({
   baseURL: 'http://localhost:3500',
   headers: {
@@ -15,7 +14,14 @@ const endpoints = {
   performance: 'performance',
 };
 
-// Fonction générique pour obtenir des données
+
+/**
+ * Makes a GET request to the API based on the provided endpoint and id.
+ *
+ * @param {string} endpoint - The API endpoint to fetch data from.
+ * @param {string|number} id - The user's id.
+ * @return {Promise} A promise that resolves with the API response data.
+ */
 const ApiService = (endpoint, id) => {
 
   if (!endpoints[endpoint]) {
