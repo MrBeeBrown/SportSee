@@ -40,6 +40,18 @@ class User extends Component {
       }
     )
   }
+  scoreToArray() {
+    return (
+      [
+        {
+          name: "score", score: (this.score * 100), fill: "#FF0000"
+        },
+        {
+          name: "score", score: 101, fill: "#F6F6F6"
+        }
+      ]
+    )
+  }
 }
 
 User.propTypes = {

@@ -80,6 +80,14 @@ h2 {
   max-width: 1000px;
   background-color: #F6F6F6;
   margin-bottom: 2rem;
+  position: relative;
+}
+
+.user__week__activity__text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.1rem;
 }
 
 .user__session {
@@ -96,6 +104,18 @@ h2 {
   background-color: #FF0000;
   border-radius: 6px;
   padding: .5rem;
+  position: relative;
+}
+
+.user__week__legend {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.user__week__legend__title {
+  color: #FFFFFF;
+  opacity: .7;
 }
 
 .user__score {
@@ -107,45 +127,33 @@ h2 {
   position: relative;
 }
 
-.score__title {
+.user__score__text {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 10px;
+  left: 10px;
   font-size: 1.2rem;
-  font-weight: 700;
 }
 
-.score__value {
+.user__score__number {
+  position: absolute;
+  top: 50%;
+  right: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  width: 60px;
+  transform: translate(50%, -50%);
+  width: 63%;
+  height: 63%;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
 }
 
-.score__value>p:nth-child(1) {
+.user__score__value {
   font-size: 2rem;
-  font-weight: 700;
-}
-
-.score__value>p:nth-child(2) {
-  width: max-content;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #74798C;
-}
-
-.score__value>p:nth-child(3) {
-  width: max-content;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #74798C;
+  font-weight: 600;
 }
 
 .user__performance {
@@ -225,7 +233,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  height: 80px;
   gap: .5rem;
   background-color: #FF0000;
   padding: .5rem;
@@ -251,40 +260,8 @@ h2 {
   font-weight: 600;
 }
 
-.first__circle {
-  fill: none;
-  stroke: #FF0000;
-  stroke-width: 1.5px;
-  stroke-dasharray: 101;
-  stroke-linecap: round;
-  transform-origin: center;
-  transform: rotate(180deg);
-}
-
-.second__circle {
-  fill: #FFFFFF;
-}
-
 @media screen and (max-width: 1100px) {
   .nutrition__value {
     font-size: 1.2rem;
-  }
-
-  .score__title {
-    top: .5rem;
-    left: .5rem;
-    font-size: 1rem;
-  }
-
-  .score__value>p:nth-child(1) {
-    font-size: 1.5rem;
-  }
-
-  .score__value>p:nth-child(2) {
-    font-size: 1rem;
-  }
-
-  .score__value>p:nth-child(3) {
-    font-size: 1rem;
   }
 }

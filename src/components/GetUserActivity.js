@@ -47,6 +47,9 @@ const GetUserActivity = ({ endpoint, id }) => {
       ) : (
         <p>No data available</p>
       )}
+      <div className='user__week__activity__text'>
+        <p>Activité quotidienne</p>
+      </div>
     </div>
   )
 };

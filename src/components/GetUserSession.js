@@ -47,6 +47,9 @@ const GetUserSession = ({ endpoint, id }) => {
       ) : (
         <p>No data available</p>
       )}
+      <div className='user__week__legend'>
+        <p className='user__week__legend__title'>Durée moyenne des sessions</p>
+      </div>
     </div>
   );
 };

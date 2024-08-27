@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SimpleRadialBarChart from '../charts/SimpleRadialBarChart';
 import ApiService from '../api/apiService';
 import User from '../models/User';
 import PropTypes from 'prop-types';
@@ -39,23 +40,17 @@ const GetUserScore = ({ endpoint, id }) => {
     return <div>Error: {error.message}</div>;
   }
 
-  const user = new User(data).toJSON();
-  const score = user.score * 100;
-  const percent = (101 - (101 * score) / 100);
+  const user = new User(data).scoreToArray();
+
   return (
     <div className='user__score'>
-      <svg viewBox="0 0 36 36" className="circle-svg">
-        <circle className='first__circle' cx="18" cy="18" r="12" strokeDashoffset={percent}></circle>
-        <circle className='second__circle' cx="18" cy="18" r="11"></circle>
-      </svg>
-      <div className='score__title'>
+      <SimpleRadialBarChart data={user} />
+      <div className='user__score__text'>
         <p>Score</p>
       </div>
-      <div className='score__value'>
-        <p>{score}%</p>
-        <p>de votre</p>
-        <p>objectif</p>
-      </div>
+      <p className='user__score__number'>
+        <span className='user__score__value'>{user[0].score}%</span>
+        de votre<br />objectif</p>
     </div>
   );
 };
