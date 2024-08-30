@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import '../css/Home.css';
 
-function UserActivity() {
+function JsonDataDisplay({ endpoint }) {
 
   const params = useParams();
   const id = parseInt(params.id);
@@ -11,7 +11,6 @@ function UserActivity() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const endpoint = "activity";
 
   useEffect(() => {
     setLoading(true);
@@ -51,4 +50,4 @@ function UserActivity() {
   );
 }
 
-export default UserActivity;
+export default JsonDataDisplay;

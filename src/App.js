@@ -3,10 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './components/Header.js';
 import Home from './components/Home';
 import Profils from './components/Profils';
-import UserActivity from './components/UserActivity.js';
-import UserSession from './components/UserSessions.js';
-import UserPerformance from './components/UserPerformance.js';
-import UserInfos from './components/UserInfos.js';
+import JsonDataDisplay from './components/JsonDataDisplay.js';
 
 /**
  * A React functional component that serves as the main application entry point.
@@ -20,10 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Profils/:id" element={<Profils />} />
-        <Route path="/user/:id" element={<UserInfos />} />
-        <Route path="/user/:id/activity" element={<UserActivity />} />
-        <Route path="/user/:id/average-sessions" element={<UserSession />} />
-        <Route path="/user/:id/performance" element={<UserPerformance />} />
+        <Route path="/user/:id" element={<JsonDataDisplay endpoint={"user"} />} />
+        <Route path="/user/:id/activity" element={<JsonDataDisplay endpoint="activity" />} />
+        <Route path="/user/:id/average-sessions" element={<JsonDataDisplay endpoint={"averageSessions"} />} />
+        <Route path="/user/:id/performance" element={<JsonDataDisplay endpoint={"performance"} />} />
       </Routes>
     </BrowserRouter>
   );
