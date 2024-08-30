@@ -40,16 +40,13 @@ const GetUsers = ({ endpoint, id }) => {
 
   const user = new User(data).toJSON();
   return (
-    <div>
-      {(data) ? (
-        <div>
-          <p>{user.firstName}</p>
-          <p>{user.lastName}</p>
-        </div>
-      ) : (
-        <p>No data available</p>
-      )}
-    </div>
+    (data) ? (
+      <div>
+        <p className='user_name'>{user.firstName} {user.lastName}</p>
+      </div>
+    ) : (
+      <p>No data available</p>
+    )
   );
 };
 

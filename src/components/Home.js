@@ -30,6 +30,9 @@ function Home() {
       <div className="main">
         <Menu />
         <div className="user__selection">
+          <div className='user__selection__text'>
+            <p>Choisissez un profil</p>
+          </div>
           <div className='all__user__info'>
             <div className='users' onClick={() => getLocation(12)}>
               <GetUsers endpoint={'user'} id={12} />

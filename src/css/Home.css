@@ -45,6 +45,7 @@ h2 {
 
 .user__selection {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
@@ -53,13 +54,17 @@ h2 {
   margin: auto;
 }
 
+.user__selection__text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .all__user__info {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 270px;
+  width: 500px;
   gap: 3.5rem;
 }
 
@@ -70,8 +75,9 @@ h2 {
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 1rem 3rem;
-  font-size: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   border: #FF0000 3px solid;
   border-radius: 6px;
   cursor: pointer;
@@ -81,6 +87,10 @@ h2 {
   background-color: #FF0000;
   color: #FFFFFF;
   border: #000000 3px solid;
+}
+
+.user_name {
+  text-align: center;
 }
 
 .red__text {
