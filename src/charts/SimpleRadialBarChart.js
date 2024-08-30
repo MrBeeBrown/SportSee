@@ -31,7 +31,7 @@ export default class SimpleRadialBarChart extends PureComponent {
 
     return (
       <ResponsiveContainer width="100%" height="100%">
-        <RadialBarChart cx="50%" cy="50%" innerRadius="70%" outerRadius="90%" barSize={20} data={data} startAngle={90} endAngle={450}>
+        <RadialBarChart cx="50%" cy="50%" innerRadius="70%" outerRadius="90%" barSize={20} data={data} startAngle={90} endAngle={450} >
           <RadialBar minAngle={15} isAnimationActive={false} background clockWise dataKey='score' legendType='none' />
           <Legend iconSize={0} layout="horizontal" verticalAlign="top" wrapperStyle={style} />
         </RadialBarChart>

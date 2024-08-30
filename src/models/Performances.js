@@ -40,12 +40,12 @@ class Performances extends Component {
           "value": this.data2
         },
         {
-          "kind": "Endurance",
-          "value": this.data3
-        },
-        {
           "kind": "Force",
           "value": this.data4
+        },
+        {
+          "kind": "Endurance",
+          "value": this.data3
         },
         {
           "kind": "Vitesse",
