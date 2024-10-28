@@ -5,13 +5,12 @@ import User from '../models/User';
 import PropTypes from 'prop-types';
 
 /**
- * Retrieves and displays a user's score based on the provided endpoint and id.
+ * Retrieves user score data from the API and renders a radial bar chart of the score.
  *
- * @param {string} endpoint - The API endpoint to fetch user data from.
- * @param {number} id - The user's id.
- * @return {JSX.Element} The user's score component.
-*/
-
+ * @param {string} endpoint - The API endpoint to fetch user score data from.
+ * @param {number} id - The user ID to fetch score data for.
+ * @return {JSX.Element} A radial bar chart of the user's score or an error/loading message.
+ */
 const GetUserScore = ({ endpoint, id }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);

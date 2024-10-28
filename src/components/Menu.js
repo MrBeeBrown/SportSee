@@ -4,6 +4,13 @@ import Swim from '../assets/swimming.svg';
 import Bike from '../assets/bicycle.svg';
 
 
+/**
+ * A React component that renders a menu section with activities icons.
+ *
+ * This component renders a menu section with activities icons. The icons are yoga, swimming, biking, and dumbbell.
+ *
+ * @return {JSX.Element} The rendered menu section element.
+ */
 function Menu() {
   return (
     <div className='activity__menu'>

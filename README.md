@@ -43,37 +43,50 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+Ensure you have the following installed:
 
-```
-Give examples
-```
+  - **Node.js** (v14.x or higher)
+  - **npm** (v6.x or higher)
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+Follow these steps to get the development environment running:
 
-Say what the step will be
+1. **Clone the repository**
 
-```
-Give the example
-```
+   ```bash
+   git clone https://github.com/MrBeeBrown/sportsee.git
 
-And repeat
+2. **Install dependencies**
 
-```
-until finished
-```
+    ```bash
+    cd sportsee
+    npm install
 
-End with an example of getting some data out of the system or using it for a little demo.
+
+4. **Start the backend server**
+
+    ```bash
+    cd backend
+    yarn dev
+    
+The backend will be accessible at http://localhost:3500.
+
+4. **Start the development server**
+
+    ```bash
+    cd sportsee
+    npm start
+    
+The project will be accessible at http://localhost:3000.
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+To use the application, navigate to http://localhost:3000 in your browser. Select a user to view their session and calorie tracking data displayed in various charts and visualizations.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+For live deployment, ensure all necessary environment variables are configured, and follow your chosen deployment provider's guidelines to deploy the build.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 

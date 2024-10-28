@@ -3,6 +3,12 @@ import React, { useState, useEffect } from 'react';
 import ApiService from '../api/apiService';
 import '../css/Home.css';
 
+/**
+ * Retrieves and displays the data from the provided endpoint and id as a JSON string.
+ *
+ * @param {string} endpoint - The API endpoint to fetch data from.
+ * @return {JSX.Element} A JSX element displaying the retrieved data in a JSON string.
+ */
 function JsonDataDisplay({ endpoint }) {
 
   const params = useParams();
@@ -35,6 +41,12 @@ function JsonDataDisplay({ endpoint }) {
     return <div>Error: {error.message}</div>;
   }
 
+/**
+ * Displays the provided data as a formatted JSON string.
+ *
+ * @param {object} data - The data to be displayed as a JSON string.
+ * @return {JSX.Element} A preformatted text element displaying the JSON string.
+ */
   const JsonDisplay = ({ data }) => {
     return (
       <pre>
