@@ -9,15 +9,15 @@ class User extends Component {
    */
   constructor(data) {
     super(data);
-    this.id = data.data.id;
-    this.firstName = data.data.userInfos.firstName;
-    this.lastName = data.data.userInfos.lastName;
-    this.age = data.data.userInfos.age;
-    this.score = data.data.score || data.data.todayScore;
-    this.calorieCount = data.data.keyData.calorieCount;
-    this.proteinCount = data.data.keyData.proteinCount;
-    this.carbohydrateCount = data.data.keyData.carbohydrateCount;
-    this.lipidCount = data.data.keyData.lipidCount;
+    this.id = data.id || data.data.id;
+    this.firstName = data.userInfos.firstName || data.data.userInfos.firstName;
+    this.lastName = data.userInfos.lastName || data.data.userInfos.lastName;
+    this.age = data.userInfos.age || data.data.userInfos.age;
+    this.score = data.score || data.todayScore ||data.data.score || data.data.todayScore;
+    this.calorieCount = data.keyData.calorieCount || data.data.keyData.calorieCount;
+    this.proteinCount = data.keyData.proteinCount || data.data.keyData.proteinCount;
+    this.carbohydrateCount = data.keyData.carbohydrateCount || data.data.keyData.carbohydrateCount;
+    this.lipidCount = data.keyData.lipidCount || data.data.keyData.lipidCount;
   }
 
   /**

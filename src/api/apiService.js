@@ -1,4 +1,7 @@
 import axios from 'axios';
+import mockData from '../data/db.json'
+
+const mockUserData = true;
 
 const apiClient = axios.create({
   baseURL: 'http://localhost:3500',
@@ -24,16 +27,44 @@ const endpoints = {
  */
 const ApiService = (endpoint, id) => {
 
-  if (!endpoints[endpoint]) {
-    throw new Error(`Vous devez fournir un endpoint valide.`);
-  }
+  if (mockUserData) {
+    return new Promise((resolve, reject) => {
+      const dataSection = mockData[endpoint];
 
-  if (endpoints[endpoint] === 'user') {
-    return apiClient.get(`/${endpoints[endpoint]}/${id}`);
+      if (!dataSection) {
+        reject(new Error(`Endpoint invalide : ${endpoint}.`));
+        return;
+      }
+
+      // Recherche de l'utilisateur en vérifiant si item et item.data existent bien
+      /* const userData = dataSection.find(
+        (item) => item && item.data && (item.data.id === id || item.data.userId === id)
+      ); */
+
+      const userData = dataSection.find(
+        (item) => item.data && (item.data.id === id || item.data.userId === id)
+      );
+
+      if (!userData || !userData.data) {
+        reject(new Error(`Pas de données trouvées pour l'endpoint "${endpoint}" et l'id "${id}".`));
+        return;
+      }
+
+      /* console.log(userData); */
+      resolve(userData);
+    });
+
   } else {
-    return apiClient.get(`/user/${id}/${endpoints[endpoint]}`);
-  }
+    if (!endpoints[endpoint]) {
+      throw new Error(`Vous devez fournir un endpoint valide.`);
+    }
 
+    if (endpoints[endpoint] === 'user') {
+      return apiClient.get(`/${endpoints[endpoint]}/${id}`);
+    } else {
+      return apiClient.get(`/user/${id}/${endpoints[endpoint]}`);
+    }
+  }
 };
 
 export default ApiService

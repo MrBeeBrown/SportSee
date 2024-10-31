@@ -12,20 +12,23 @@ class AverageSessions extends Component {
    */
   constructor(data) {
     super(data);
-    this.day1 = data.data.sessions[0].day;
-    this.day2 = data.data.sessions[1].day;
-    this.day3 = data.data.sessions[2].day;
-    this.day4 = data.data.sessions[3].day;
-    this.day5 = data.data.sessions[4].day;
-    this.day6 = data.data.sessions[5].day;
-    this.day7 = data.data.sessions[6].day;
-    this.sessionsLength1 = data.data.sessions[0].sessionLength;
-    this.sessionsLength2 = data.data.sessions[1].sessionLength;
-    this.sessionsLength3 = data.data.sessions[2].sessionLength;
-    this.sessionsLength4 = data.data.sessions[3].sessionLength;
-    this.sessionsLength5 = data.data.sessions[4].sessionLength;
-    this.sessionsLength6 = data.data.sessions[5].sessionLength;
-    this.sessionsLength7 = data.data.sessions[6].sessionLength;
+
+    const sessions = (data.sessions || data.data.sessions);
+
+    this.day1 = sessions[0].day || sessions[0].day;
+    this.day2 = sessions[1].day || sessions[1].day;
+    this.day3 = sessions[2].day || sessions[2].day;
+    this.day4 = sessions[3].day || sessions[3].day;
+    this.day5 = sessions[4].day || sessions[4].day;
+    this.day6 = sessions[5].day || sessions[5].day;
+    this.day7 = sessions[6].day || sessions[6].day;
+    this.sessionsLength1 = sessions[0].sessionLength || sessions[0].sessionLength;
+    this.sessionsLength2 = sessions[1].sessionLength || sessions[1].sessionLength;
+    this.sessionsLength3 = sessions[2].sessionLength || sessions[2].sessionLength;
+    this.sessionsLength4 = sessions[3].sessionLength || sessions[3].sessionLength;
+    this.sessionsLength5 = sessions[4].sessionLength || sessions[4].sessionLength;
+    this.sessionsLength6 = sessions[5].sessionLength || sessions[5].sessionLength;
+    this.sessionsLength7 = sessions[6].sessionLength || sessions[6].sessionLength;
   }
 
   /**
