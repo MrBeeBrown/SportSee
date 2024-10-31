@@ -36,11 +36,6 @@ const ApiService = (endpoint, id) => {
         return;
       }
 
-      // Recherche de l'utilisateur en vérifiant si item et item.data existent bien
-      /* const userData = dataSection.find(
-        (item) => item && item.data && (item.data.id === id || item.data.userId === id)
-      ); */
-
       const userData = dataSection.find(
         (item) => item.data && (item.data.id === id || item.data.userId === id)
       );
@@ -50,7 +45,6 @@ const ApiService = (endpoint, id) => {
         return;
       }
 
-      /* console.log(userData); */
       resolve(userData);
     });
 
