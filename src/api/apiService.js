@@ -1,7 +1,7 @@
 import axios from 'axios';
 import mockData from '../data/db.json'
 
-const mockUserData = true;
+const mockUserData = false;
 
 const apiClient = axios.create({
   baseURL: 'http://localhost:3500',

@@ -14,27 +14,27 @@ class Activity extends Component {
    */
   constructor(data) {
     super(data);
-    this.day1 = data.sessions[0].day || data.data.sessions[0].day;
-    this.day2 = data.sessions[1].day || data.data.sessions[1].day;
-    this.day3 = data.sessions[2].day || data.data.sessions[2].day;
-    this.day4 = data.sessions[3].day || data.data.sessions[3].day;
-    this.day5 = data.sessions[4].day || data.data.sessions[4].day;
-    this.day6 = data.sessions[5].day || data.data.sessions[5].day;
-    this.day7 = data.sessions[6].day || data.data.sessions[6].day;
-    this.kilogram1 = data.sessions[0].kilogram || data.data.sessions[0].kilogram;
-    this.kilogram2 = data.sessions[1].kilogram || data.data.sessions[1].kilogram;
-    this.kilogram3 = data.sessions[2].kilogram || data.data.sessions[2].kilogram;
-    this.kilogram4 = data.sessions[3].kilogram || data.data.sessions[3].kilogram;
-    this.kilogram5 = data.sessions[4].kilogram || data.data.sessions[4].kilogram;
-    this.kilogram6 = data.sessions[5].kilogram || data.data.sessions[5].kilogram;
-    this.kilogram7 = data.sessions[6].kilogram || data.data.sessions[6].kilogram;
-    this.calories1 = data.sessions[0].calories || data.data.sessions[0].calories;
-    this.calories2 = data.sessions[1].calories || data.data.sessions[1].calories;
-    this.calories3 = data.sessions[2].calories || data.data.sessions[2].calories;
-    this.calories4 = data.sessions[3].calories || data.data.sessions[3].calories;
-    this.calories5 = data.sessions[4].calories || data.data.sessions[4].calories;
-    this.calories6 = data.sessions[5].calories || data.data.sessions[5].calories;
-    this.calories7 = data.sessions[6].calories || data.data.sessions[6].calories;
+    this.day1 = data?.sessions?.[0]?.day ?? data?.data?.sessions?.[0]?.day ?? null;
+    this.day2 = data?.sessions?.[1]?.day ?? data?.data?.sessions?.[1]?.day ?? null;
+    this.day3 = data?.sessions?.[2]?.day ?? data?.data?.sessions?.[2]?.day ?? null;
+    this.day4 = data?.sessions?.[3]?.day ?? data?.data?.sessions?.[3]?.day ?? null;
+    this.day5 = data?.sessions?.[4]?.day ?? data?.data?.sessions?.[4]?.day ?? null;
+    this.day6 = data?.sessions?.[5]?.day ?? data?.data?.sessions?.[5]?.day ?? null;
+    this.day7 = data?.sessions?.[6]?.day ?? data?.data?.sessions?.[6]?.day ?? null;
+    this.kilogram1 = data?.sessions?.[0]?.kilogram ?? data?.data?.sessions?.[0]?.kilogram ?? 0;
+    this.kilogram2 = data?.sessions?.[1]?.kilogram ?? data?.data?.sessions?.[1]?.kilogram ?? 0;
+    this.kilogram3 = data?.sessions?.[2]?.kilogram ?? data?.data?.sessions?.[2]?.kilogram ?? 0;
+    this.kilogram4 = data?.sessions?.[3]?.kilogram ?? data?.data?.sessions?.[3]?.kilogram ?? 0;
+    this.kilogram5 = data?.sessions?.[4]?.kilogram ?? data?.data?.sessions?.[4]?.kilogram ?? 0;
+    this.kilogram6 = data?.sessions?.[5]?.kilogram ?? data?.data?.sessions?.[5]?.kilogram ?? 0;
+    this.kilogram7 = data?.sessions?.[6]?.kilogram ?? data?.data?.sessions?.[6]?.kilogram ?? 0;
+    this.calories1 = data?.sessions?.[0]?.calories ?? data?.data?.sessions?.[0]?.calories ?? 0;
+    this.calories2 = data?.sessions?.[1]?.calories ?? data?.data?.sessions?.[1]?.calories ?? 0;
+    this.calories3 = data?.sessions?.[2]?.calories ?? data?.data?.sessions?.[2]?.calories ?? 0;
+    this.calories4 = data?.sessions?.[3]?.calories ?? data?.data?.sessions?.[3]?.calories ?? 0;
+    this.calories5 = data?.sessions?.[4]?.calories ?? data?.data?.sessions?.[4]?.calories ?? 0;
+    this.calories6 = data?.sessions?.[5]?.calories ?? data?.data?.sessions?.[5]?.calories ?? 0;
+    this.calories7 = data?.sessions?.[6]?.calories ?? data?.data?.sessions?.[6]?.calories ?? 0;
   }
 
   /**
